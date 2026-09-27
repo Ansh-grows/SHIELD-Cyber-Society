@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Target, Compass, Award, CheckCircle2, FileText, Lock, Users, School } from 'lucide-react';
+import { Target, Compass, Award, CheckCircle2, FileText, Lock, Users } from 'lucide-react';
 import SectionEyebrow from '../components/SectionEyebrow';
 import IconPill from '../components/IconPill';
 import NetworkBackground from '../components/NetworkBackground';
@@ -50,84 +50,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 2. WHO WE ARE, MISSION & VISION */}
-      <section className="py-20 bg-shield-bgLight border-b border-shield-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            {/* Who We Are */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="bg-white rounded-2xl p-8 border border-shield-border shadow-card hover:shadow-card-hover transition-all"
-            >
-              <div className="w-12 h-12 rounded-xl bg-navy-800 text-white flex items-center justify-center mb-6">
-                <School className="w-6 h-6 text-shield-gold" />
-              </div>
-              <div className="text-[11px] font-bold tracking-widest text-accent-blue uppercase mb-1">
-                ORGANIZATION
-              </div>
-              <h2 className="text-2xl font-bold font-heading text-navy-800 mb-4">
-                Who We Are
-              </h2>
-              <p className="text-sm text-shield-mutedText leading-relaxed">
-                SHIELD is a cybersecurity society of NIT Hamirpur focused on cybersecurity education, ethical hacking, security research, practical projects, CTFs, workshops, and collaboration. We bring together students from all disciplines who share a hunger to understand how computer systems work, how they can be exploited, and how to defend them against modern threats.
-              </p>
-            </motion.div>
-
-            {/* Mission */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className="bg-white rounded-2xl p-8 border border-accent-blue/30 shadow-card hover:shadow-card-hover transition-all relative overflow-hidden"
-            >
-              <div className="w-12 h-12 rounded-xl bg-accent-blue text-white flex items-center justify-center mb-6">
-                <Target className="w-6 h-6" />
-              </div>
-              <div className="text-[11px] font-bold tracking-widest text-shield-gold uppercase mb-1">
-                OUR PURPOSE
-              </div>
-              <h2 className="text-2xl font-bold font-heading text-navy-800 mb-4">
-                Our Mission
-              </h2>
-              <p className="text-sm text-shield-mutedText leading-relaxed">
-                To create a community where students can learn cybersecurity, experiment ethically, build security-focused solutions, and develop skills to defend digital systems. We strive to demystify complex security concepts through structured hands-on wargames and open-source contributions.
-              </p>
-            </motion.div>
-
-            {/* Vision */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="bg-white rounded-2xl p-8 border border-shield-border shadow-card hover:shadow-card-hover transition-all"
-            >
-              <div className="w-12 h-12 rounded-xl bg-navy-800 text-white flex items-center justify-center mb-6">
-                <Compass className="w-6 h-6 text-emerald-400" />
-              </div>
-              <div className="text-[11px] font-bold tracking-widest text-emerald-600 uppercase mb-1">
-                THE FUTURE
-              </div>
-              <h2 className="text-2xl font-bold font-heading text-navy-800 mb-4">
-                Our Vision
-              </h2>
-              <p className="text-sm text-shield-mutedText leading-relaxed">
-                Building technically skilled and ethically responsible cybersecurity professionals who excel in industry, security research, and national cyber defense frameworks while representing NIT Hamirpur on prestigious national and global platforms.
-              </p>
-            </motion.div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* 3. FOUR PILLARS EXPANDED CARDS */}
+      {/* 2. FOUR PILLARS EXPANDED CARDS */}
       <section className="py-20 bg-white border-b border-shield-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -186,8 +109,8 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="bg-navy-900 text-white rounded-2xl p-8 sm:p-10 border border-navy-700 shadow-xl relative overflow-hidden">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-navy-800 border border-shield-gold flex items-center justify-center flex-shrink-0">
-                <Shield className="w-6 h-6 text-shield-gold" />
+              <div className="w-12 h-12 rounded-xl bg-navy-800 border border-shield-gold/40 flex items-center justify-center overflow-hidden p-1 flex-shrink-0 shadow-md">
+                <img src="/shield-logo.png" alt="SHIELD Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <span className="text-[11px] uppercase font-bold tracking-widest text-shield-gold">

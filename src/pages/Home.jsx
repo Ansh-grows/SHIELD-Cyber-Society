@@ -2,28 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Shield, 
   ArrowRight, 
   Terminal, 
   Globe2, 
   Cpu, 
-  Layers, 
-  CheckCircle, 
   Users, 
-  Award,
-  BookOpen,
   Lock,
-  Sparkles
+  School,
+  Target,
+  Compass
 } from 'lucide-react';
 import SectionEyebrow from '../components/SectionEyebrow';
 import IconPill from '../components/IconPill';
 import NetworkBackground from '../components/NetworkBackground';
-import InfoCard from '../components/InfoCard';
-import { UPCOMING_EVENTS } from '../data/activitiesData';
 
 export default function Home() {
-  const featuredEvent = UPCOMING_EVENTS[0];
-
   const whatWeDoCards = [
     {
       icon: Globe2,
@@ -55,12 +48,7 @@ export default function Home() {
     }
   ];
 
-  const stats = [
-    { label: 'SPECIALIZED DOMAINS', value: '8', sub: 'Comprehensive Tracks' },
-    { label: 'ACTIVE MEMBERS', value: '60+', sub: 'Across NIT Hamirpur' },
-    { label: 'WORKSHOPS CONDUCTED', value: '15+', sub: 'Hands-on Bootcamps' },
-    { label: 'CTFS & CHALLENGES', value: '10+', sub: 'Hosted & Competed' }
-  ];
+
 
   return (
     <div className="relative overflow-hidden">
@@ -159,8 +147,85 @@ export default function Home() {
         <IconPill variant="row" />
       </section>
 
-      {/* 3. WHAT WE DO PREVIEW STRIP */}
+      {/* 3. WHO WE ARE, MISSION & VISION */}
       <section className="py-20 bg-shield-bgLight border-b border-shield-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            {/* Who We Are */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="bg-white rounded-2xl p-8 border border-shield-border shadow-card hover:shadow-card-hover transition-all"
+            >
+              <div className="w-12 h-12 rounded-xl bg-navy-800 text-white flex items-center justify-center mb-6">
+                <School className="w-6 h-6 text-shield-gold" />
+              </div>
+              <div className="text-[11px] font-bold tracking-widest text-accent-blue uppercase mb-1">
+                ORGANIZATION
+              </div>
+              <h2 className="text-2xl font-bold font-heading text-navy-800 mb-4">
+                Who We Are
+              </h2>
+              <p className="text-sm text-shield-mutedText leading-relaxed">
+                SHIELD is a cybersecurity society of NIT Hamirpur focused on cybersecurity education, ethical hacking, security research, practical projects, CTFs, workshops, and collaboration. We bring together students from all disciplines who share a hunger to understand how computer systems work, how they can be exploited, and how to defend them against modern threats.
+              </p>
+            </motion.div>
+
+            {/* Mission */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              className="bg-white rounded-2xl p-8 border border-accent-blue/30 shadow-card hover:shadow-card-hover transition-all relative overflow-hidden"
+            >
+              <div className="w-12 h-12 rounded-xl bg-accent-blue text-white flex items-center justify-center mb-6">
+                <Target className="w-6 h-6" />
+              </div>
+              <div className="text-[11px] font-bold tracking-widest text-shield-gold uppercase mb-1">
+                OUR PURPOSE
+              </div>
+              <h2 className="text-2xl font-bold font-heading text-navy-800 mb-4">
+                Our Mission
+              </h2>
+              <p className="text-sm text-shield-mutedText leading-relaxed">
+                To create a community where students can learn cybersecurity, experiment ethically, build security-focused solutions, and develop skills to defend digital systems. We strive to demystify complex security concepts through structured hands-on wargames and open-source contributions.
+              </p>
+            </motion.div>
+
+            {/* Vision */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="bg-white rounded-2xl p-8 border border-shield-border shadow-card hover:shadow-card-hover transition-all"
+            >
+              <div className="w-12 h-12 rounded-xl bg-navy-800 text-white flex items-center justify-center mb-6">
+                <Compass className="w-6 h-6 text-emerald-400" />
+              </div>
+              <div className="text-[11px] font-bold tracking-widest text-emerald-600 uppercase mb-1">
+                THE FUTURE
+              </div>
+              <h2 className="text-2xl font-bold font-heading text-navy-800 mb-4">
+                Our Vision
+              </h2>
+              <p className="text-sm text-shield-mutedText leading-relaxed">
+                Building technically skilled and ethically responsible cybersecurity professionals who excel in industry, security research, and national cyber defense frameworks while representing NIT Hamirpur on prestigious national and global platforms.
+              </p>
+            </motion.div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* 4. WHAT WE DO PREVIEW STRIP */}
+      <section className="py-20 bg-white border-b border-shield-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-14">
@@ -212,88 +277,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. STATS STRIP */}
-      <section className="py-14 bg-white border-b border-shield-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-shield-border">
-            {stats.map((item, idx) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: idx * 0.1 }}
-                className={`text-center ${idx > 0 ? 'pt-4 sm:pt-0 sm:pl-6' : ''}`}
-              >
-                <div className="text-3xl sm:text-5xl font-black font-heading text-navy-800 tracking-tight mb-1">
-                  {item.value}
-                </div>
-                <div className="text-xs font-bold uppercase tracking-widest text-accent-blue mb-0.5">
-                  {item.label}
-                </div>
-                <div className="text-xs text-shield-mutedText">
-                  {item.sub}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. POSTER-STYLE FEATURED EVENT CALLOUT */}
-      <section className="py-20 bg-shield-bgLight border-b border-shield-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto bg-white border-2 border-accent-blue/30 rounded-2xl p-6 sm:p-10 shadow-card relative overflow-hidden">
-            
-            {/* Top poster header treatment */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-shield-border pb-6 mb-8">
-              <div>
-                <SectionEyebrow text="FEATURED INITIATIVE · NIT HAMIRPUR" />
-                <h3 className="text-2xl sm:text-3xl font-extrabold font-heading text-navy-800 tracking-tight">
-                  {featuredEvent.title}
-                </h3>
-                <p className="text-sm text-accent-blue font-semibold mt-1">
-                  {featuredEvent.tagline}
-                </p>
-              </div>
-              <span className="self-start sm:self-auto px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-700 text-xs font-bold uppercase tracking-wider border border-emerald-500/20 flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                {featuredEvent.status}
-              </span>
-            </div>
-
-            {/* Poster Info-Grid (Eligibility, Date & Time, Venue, Purpose) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
-              {featuredEvent.infoGrid.map((item) => (
-                <InfoCard
-                  key={item.label}
-                  icon={item.icon}
-                  label={item.label}
-                  value={item.value}
-                  description={item.description}
-                />
-              ))}
-            </div>
-
-            {/* CTA action bar */}
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-shield-border bg-shield-bgLight -mx-6 sm:-mx-10 -mb-6 sm:-mb-10 p-6 sm:px-10 rounded-b-2xl">
-              <div className="text-xs sm:text-sm text-shield-mutedText">
-                <strong className="text-navy-800">Recruitment open:</strong> Apply online or visit our orientation session.
-              </div>
-              <Link
-                to={featuredEvent.registrationLink}
-                className="w-full sm:w-auto px-6 py-3 rounded-full bg-navy-800 hover:bg-navy-900 text-white font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
-              >
-                <span>{featuredEvent.buttonText}</span>
-                <ArrowRight className="w-4 h-4 text-shield-gold" />
-              </Link>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 6. ETHICAL SECURITY COMMITMENT BANNER */}
+      {/* 5. ETHICAL SECURITY COMMITMENT BANNER */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <div className="w-12 h-12 rounded-full bg-shield-gold/10 text-shield-gold flex items-center justify-center mx-auto mb-4 border border-shield-gold/30">

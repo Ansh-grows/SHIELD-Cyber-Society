@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Mail, MapPin, ExternalLink, Github, Linkedin, Twitter, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, ExternalLink, Github, Linkedin, Twitter, ArrowUpRight } from 'lucide-react';
 
 export default function WaveFooter() {
   return (
@@ -9,7 +9,7 @@ export default function WaveFooter() {
       {/* SVG Wave Divider Transitioning from page background into Dark Navy */}
       <div className="w-full overflow-hidden leading-none -mt-1 pointer-events-none">
         <svg
-          className="relative block w-full h-14 sm:h-20 md:h-28"
+          className="relative block w-full h-8 sm:h-12 md:h-14"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
           fill="none"
@@ -29,14 +29,14 @@ export default function WaveFooter() {
       </div>
 
       {/* Main Footer Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-navy-700/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 sm:pt-6 sm:pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 pb-6 border-b border-navy-700/60">
           
           {/* Brand Column (2 cols wide on desktop) */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-3">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-navy-800 border-2 border-shield-gold flex items-center justify-center">
-                <Shield className="w-7 h-7 text-shield-gold" />
+              <div className="w-12 h-12 rounded-xl bg-navy-800/90 border border-shield-gold/40 flex items-center justify-center overflow-hidden p-1 shadow-md">
+                <img src="/shield-logo.png" alt="SHIELD Cyber Society Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <div className="flex items-center gap-2">
@@ -162,13 +162,13 @@ export default function WaveFooter() {
           </div>
 
           {/* Signature Corner Badge Stack from the Poster */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-widest text-shield-gold pb-1 border-b border-navy-700/40">
               Pillars of Practice
             </h4>
             
             {/* Poster Corner Stack: SECURE / LEARN / EMPOWER / LEAD */}
-            <div className="bg-navy-800/90 border border-navy-700 rounded-xl p-4 space-y-2 text-center">
+            <div className="bg-navy-800/90 border border-navy-700 rounded-xl p-3 space-y-2 text-center">
               <div className="text-[10px] uppercase font-bold tracking-ultra text-gray-400">
                 OFFICIAL VALUES
               </div>
@@ -178,7 +178,7 @@ export default function WaveFooter() {
                 <div className="text-shield-gold">EMPOWER</div>
                 <div className="text-gray-200">LEAD</div>
               </div>
-              <div className="pt-2">
+              <div className="pt-1.5">
                 <Link 
                   to="/join"
                   className="inline-flex items-center gap-1 text-[11px] font-bold text-shield-gold hover:text-white transition-colors"
@@ -190,7 +190,7 @@ export default function WaveFooter() {
             </div>
 
             {/* Social links */}
-            <div className="flex items-center gap-3 pt-1">
+            <div className="flex items-center gap-3 pt-0.5">
               <a 
                 href="https://github.com" 
                 target="_blank" 
@@ -225,7 +225,7 @@ export default function WaveFooter() {
         </div>
 
         {/* Bottom copyright bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-400">
           <div>
             © {new Date().getFullYear()} SHIELD Cyber Society, NIT Hamirpur. All rights reserved.
           </div>
