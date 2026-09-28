@@ -46,7 +46,7 @@ export default function Home() {
       title: 'Recruitment & Community',
       desc: 'Join a tight-knit community of curious technologists, ethical hackers, and defensive engineers at NIT Hamirpur.',
       link: '/join',
-      linkText: 'Join the Society'
+      linkText: 'Register for Workshop'
     }
   ];
 
@@ -127,7 +127,7 @@ export default function Home() {
                 to="/join"
                 className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-navy-800 hover:bg-navy-900 text-white font-heading font-bold text-sm tracking-wider uppercase transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2"
               >
-                <span>Join the Society</span>
+                <span>Register for Workshop</span>
                 <ArrowRight className="w-4 h-4 text-shield-gold" />
               </Link>
               <Link

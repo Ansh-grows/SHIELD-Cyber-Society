@@ -183,7 +183,7 @@ export default function WaveFooter() {
                   to="/join"
                   className="inline-flex items-center gap-1 text-[11px] font-bold text-shield-gold hover:text-white transition-colors"
                 >
-                  <span>Recruitment Portal</span>
+                  <span>Register for Workshop</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
               </div>

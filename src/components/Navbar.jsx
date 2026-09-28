@@ -96,12 +96,12 @@ export default function Navbar() {
               </NavLink>
             ))}
 
-            {/* "Join Us" button styled as filled navy pill on the right */}
+            {/* Workshop registration button styled as a filled navy pill on the right */}
             <Link
               to="/join"
               className="ml-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-navy-800 hover:bg-navy-900 text-white font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
             >
-              <span>Join Us</span>
+              <span>Register for Workshop</span>
               <ChevronRight className="w-3.5 h-3.5 text-shield-gold" />
             </Link>
           </nav>
@@ -110,9 +110,9 @@ export default function Navbar() {
           <div className="flex items-center gap-2 lg:hidden">
             <Link
               to="/join"
-              className="px-3.5 py-1.5 rounded-full bg-navy-800 text-white text-xs font-bold uppercase tracking-wider"
+              className="hidden sm:inline-flex px-3.5 py-1.5 rounded-full bg-navy-800 text-white text-xs font-bold uppercase tracking-wider"
             >
-              Join
+              Register for Workshop
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -149,7 +149,7 @@ export default function Navbar() {
               to="/join"
               className="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-navy-800 text-white font-bold text-sm tracking-wide text-center"
             >
-              <span>Join SHIELD Society</span>
+              <span>Register for Workshop</span>
               <ChevronRight className="w-4 h-4 text-shield-gold" />
             </Link>
           </div>
